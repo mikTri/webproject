@@ -39,6 +39,20 @@ html::-webkit-scrollbar-thumb{
 body{
     background: var(--bg);
 }
+section{
+    padding: 2rem 7%;
+}
+.heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -164,6 +178,58 @@ body{
     width: 100%;
     text-align: center;
 }
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../img/coffee-cup-and-beans.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    max-width: 60rem;
+}
+.home .content h3{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #e8c826;
+}
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #e8c826;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+
+}
+.about .row .img{
+    flex: 1 1 45rem;
+}
+.about .row .img img{
+    width: 100%;
+}
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: #fff;
+
+}
+.about .row .content p{
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
 
 
 /* media queries */
@@ -174,6 +240,10 @@ body{
     .header{
         padding: 1.5rem 2rem;
     }
+    section{
+        padding: 2rem;
+    }
+   
 }
 @media(max-width:768px){
     #menu-btn{
@@ -200,9 +270,28 @@ body{
         width: 90%;
         right: 2rem;
     }
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+    .home .content p{
+        font-size: 1rem;
+    }
 }
 @media(max-width:450px){
     html{
         font-size:50%;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
     }
 }
