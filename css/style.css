@@ -429,6 +429,7 @@ section{
     /* height: calc(70vh - 5rem); */
     width: 35rem;
     padding: 0 1.5rem;
+
     transition: 0.5s;
 }
 
@@ -758,4 +759,5 @@ section{
         justify-content: center;
         text-align: center;
     }
+
 }
