@@ -23,51 +23,40 @@
             <a href="#contact">contact</a>
             <a href="#blog">blog</a>
         </nav>
+
         <div class="icons">
             <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn"></div>
             <div class="fas fa-bars" id="menu-btn"></div>
+            <span class="quantity">0</span>
+            <div class="list"></div>
         </div>
         <div class="search-form">
             <input type="search" id="search-box" placeholder="search here....">
             <label for="search-box" class="fas fa-search"></label>
         </div>
+
+
+        <!-- Add to cart start  -->
         <div class="cart-item-container">
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="img/logo.jpg" alt="cart-item2">
-                <div class="content">
-                    <h3>cart item 01</h3>
-                    <div class="price">$15.99</div>
-                </div>
+            <h1 class="cart-title">Bạn đã chọn:</h1>
+            <ul class="listCard">
+                <!-- js script here! -->
+            </ul>
+            
+            <div class="checkout">
+                <div class="total">0</div>
+                <div class="payment">Thanh toán</div>
+                <div class="closeShopping">Đóng</div>
             </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="img/logo.jpg" alt="cart-item2">
-                <div class="content">
-                    <h3>cart item 02</h3>
-                    <div class="price">$15.99</div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="img/logo.jpg" alt="">
-                <div class="content">
-                    <h3>cart item 03</h3>
-                    <div class="price">$15.99</div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="img/logo.jpg" alt="">
-                <div class="content">
-                    <h3>cart item 04</h3>
-                    <div class="price">$15.99</div>
-                </div>
-            </div>
-            <a href="#" class="btn">checkout now</a>
+
         </div>
+        <!-- Add to cart end  -->
+
     </header>
+
+
+    
     <!-- header section end -->
     <!-- home section start -->
     <section class="home" id="home">
@@ -101,7 +90,194 @@
         </div>
     </section>
 
-    <!-- about section end -->
+
+    <!-- MENU section starts  -->
+    <section class="menu" id="menu">
+        <h1 class="heading"> our <span>menu</span></h1>
+        <div class="box-container" id="listmenu">
+            <!-- js script is running here!  -->
+        </div>
+    </section>
+    <!-- MENU section ends  -->
+
+    <!-- PRODUCTS section starts  -->
+    <section class="products" id="products">
+        <h1 class="heading"> our <span>products</span></h1>
+        <div class="box-container" id="listproduct">   
+            <!-- js script is running here!  -->
+        </div>
+    </section>
+    <!-- PRODUCTS section ends  -->
+
+
+    <!-- REVIEW section starts  -->
+    <section class="review" id="review">
+        <h1 class="heading">customer's <span>review</span></h1>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review </p>
+                <img src="images/pic-1.png" class="user" alt="">
+                <h3>username1</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review </p>
+                <img src="images/pic-2.png" class="user" alt="">
+                <h3>username2</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review </p>
+                <img src="images/pic-3.png" class="user" alt="">
+                <h3>username3</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review </p>
+                <img src="images/pic-4.png" class="user" alt="">
+                <h3>username4</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- REVIEW section ends  -->
+    
+    <!-- start contact section -->
+    <section class="contact" id="contact">
+        <!-- <h1 class="heading"> <span>Liên hệ với </span> chúng tôi </h1> -->
+        <h1 class="heading"> Contact us now </h1>
+        <div class="row">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52733.18338828663!2d106.69060881551233!3d10.779316082970821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f38f9ed887b%3A0x14aded5703768989!2zUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1712459244735!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <form action="">
+                <h3> Your information </h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="Họ tên">
+                </div>
+
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="Số điện thoại">
+                </div>
+                
+                <input type="submit" value="Liên hệ ngay" class="btn">
+            </form>
+        </div>
+    </section>
+    <!-- end contact section -->
+
+
+    <!-- start blog section -->
+    <section class="blog" id="blog">
+        <h1 class="heading"> <span>Blog</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="../doan/img/blog-1.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">tasty milktea</a>
+                    <span>by admin / 07th apr, 2024</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../doan/img/blog-1.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">tasty milktea</a>
+                    <span>by admin / 07th apr, 2024</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../doan/img/blog-1.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">tasty milktea</a>
+                    <span>by admin / 07th apr, 2024</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end blog section -->
+
+    <!-- start fotter section -->
+    <section class="footer">
+        <div class="share">
+            <h3> Social media </h2>
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+            <a href="https://www.tiktok.com/" class="fab fa-tiktok"></a>
+            <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Product</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+            <a href="#blog">Blog</a>
+        </div>
+
+        <div class="credit">Created by <span>Milk Tea Shop</span> | All rights reserved</div>>
+    </section>
+    <!-- end fotter section -->
+
+
     <script src="js/script.js"></script>
 </body>
 </html>
