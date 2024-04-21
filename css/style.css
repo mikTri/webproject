@@ -511,8 +511,7 @@ section{
 
 /* contact */
 .contact .row{
-    display: subgrid;
-    align-items: center;
+    display: flex;
     background: var(--black);
     flex-wrap: wrap;
     gap: 1rem;
@@ -684,7 +683,7 @@ section{
 }
 
 .footer .credit{
-    font-size: 2rem;
+    font-size: 1.5rem;
     /* font-size: 1rem; */
     color: #fff;
     font-weight: lighter;
