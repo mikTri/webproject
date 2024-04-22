@@ -5,8 +5,8 @@
 
 
 :root{
-    --main-color: #d3ad7f;
-    --main-color_dark: #8b6331;
+    --main-color: #c3d86d;
+    --main-color_dark: #434738;
     --black:#13131a;
     --bg: #f3f8dd;
     --border:.1rem solid rgba(255,255,255,.3);
@@ -45,10 +45,11 @@ section{
 }
 .heading{
     text-align: center;
-    color: #000000;
+    color: #653928;
     text-transform: uppercase;
-    padding-bottom: 3.5rem;
-    font-size: 4rem;
+    padding-bottom: 2rem;
+    font-size: 3.5rem;
+    font-weight:750;
 }
 .heading span{
     color: var(--main-color);
@@ -57,18 +58,19 @@ section{
 .btn{
     margin-top: 1rem;
     display: inline-block;
-    padding: .8rem 3rem;
+    padding: 1rem 3rem;
     font-size: 1.7rem;
-    color: #ffffff;
+    color: var(--main-color_dark);
     background: var(--main-color);
     cursor: pointer;
+    border-radius:20cm;
 }
 .btn:hover{
     letter-spacing: .2rem;
 }
 
 .header{
-    background: #c3d86d;
+    background: #7ec06a;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -199,7 +201,7 @@ section{
 .home .content h3{
     font-size: 5rem;
     text-transform: uppercase;
-    color: #e8c826;
+    color: #141103;
 }
 .home .content p{
     font-size: 2rem;
@@ -210,12 +212,14 @@ section{
 }
 
 /* about section */
+.about{
+    background: #ece4be;
+    background-color: light;
+}
 .about .row{
     display: flex;
     align-items: center;
-    background: var(--black);
-    flex-wrap: wrap;
-
+    
 }
 .about .row .img{
     flex: 1 1 45rem;
