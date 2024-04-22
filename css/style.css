@@ -8,7 +8,7 @@
     --main-color: #d3ad7f;
     --main-color_dark: #8b6331;
     --black:#13131a;
-    --bg: #010103;
+    --bg: #f3f8dd;
     --border:.1rem solid rgba(255,255,255,.3);
 }
 
@@ -45,7 +45,7 @@ section{
 }
 .heading{
     text-align: center;
-    color: #fff;
+    color: #000000;
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;
@@ -68,7 +68,7 @@ section{
 }
 
 .header{
-    background: var(--bg);
+    background: #c3d86d;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,8 +83,10 @@ section{
 }
 .header .navbar a{
     margin: 0 1rem;
-    font-size: 1.6rem;
-    color: #fff;
+    font-size: 1.8rem;
+    color: #434738;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .header .navbar a:hover{
     color: var(--main-color);
@@ -187,7 +189,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(../img/coffee-cup-and-beans.jpg) no-repeat;
+    background: url(../img/banner-menu-1900-x-335.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
