@@ -689,7 +689,7 @@ section{
 }
 
 .footer .credit{
-    font-size: 2rem;
+    font-size: 1.5rem;
     /* font-size: 1rem; */
     color: #fff;
     font-weight: lighter;
@@ -763,5 +763,3 @@ section{
         justify-content: center;
         text-align: center;
     }
-
-}
