@@ -332,7 +332,7 @@ section{
 
 .promo .row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     background: #edfed8;
     /* background: #cdee77; */
     flex-wrap: wrap;
