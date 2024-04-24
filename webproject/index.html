@@ -1,0 +1,294 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header section start -->
+    <header class="header">
+        <!-- tao link khi bam vo logo -->
+        <a href="#home" class="logo">
+            <img src="img/koala-logo.png" alt="">
+        </a>
+        <nav class="navbar">
+            <a href="#home">Trang chủ</a>
+            <a href="#about">Về chúng tôi</a>
+            <a href="#menu">thực đơn</a>
+            
+            <a href="#review">Đánh giá</a>
+            <a href="#contact">Liên hệ</a>
+            <a href="news.html">tin tức & ưu đãi</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"><span class="quantity" id="QuanIsExisted"></span></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+            
+            <div class="list"></div>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Tìm kiếm tại đây....">
+            <label for="search-box" class="fas fa-search"></label>
+            <ul id="search-list">
+                <li><a href="#">Trà đào sữa</a></li>
+                <li><a href="#">Trà sữa bạc hà</a></li>
+                <li><a href="#">Trà sữa cafe và kem tươi</a></li>
+                <li><a href="#">Trà sữa khoai môn</a></li>
+                <li><a href="#">Trà sữa ô long</a></li>
+                <li><a href="#">Trà sữa Pudding đậu đỏ</a></li>
+                <li><a href="#">Trà sữa sương sáo</a></li>
+                <li><a href="#">Trà sữa Thái</a></li>
+                <li><a href="#">Trà sữa trân châu đường đen</a></li>
+                <li><a href="#">Trà sữa trân châu trắng</a></li>
+                <li><a href="#">Trà sữa vải</a></li>
+                <li><a href="#">Trà sữa xoài kem cheese</a></li>
+            </ul>
+        </div>
+
+
+        <!-- Add to cart start  -->
+        <div class="cart-item-container">
+            <h3 class="cart-title">Bạn đã chọn:</h3>
+            <ul class="listCard">
+                <!-- js script here! -->
+            </ul>
+            
+            <div class="checkout">
+                <div class="total">0</div>
+                <div class="payment">Đặt ngay</div>
+                <div class="closeShopping">Đóng</div>
+            </div>
+
+        </div>
+        <!-- Add to cart end  -->
+
+    </header>
+
+
+    
+    <!-- header section end -->
+    <!-- home section start -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>KOALA TEA - Trà sữa và tình yêu cuộc sống</h3>
+                <p>
+                    Chào mừng bạn đến với Koala Tea - điểm đến lý tưởng cho những tín đồ trà sữa! Tại đây, chúng tôi tự hào mang đến cho khách hàng những ly trà sữa thơm ngon và độc đáo, được chế biến từ những nguyên liệu chất lượng cao. Không chỉ là nơi thưởng thức đồ uống, Koala Tea còn là không gian lý tưởng để bạn thư giãn và tận hưởng khoảnh khắc bên người thân và bạn bè. Hãy ghé thăm chúng tôi và khám phá sự đặc biệt của Koala Tea ngay hôm nay!
+                </p>
+                <a href="#about" class="btn">Khám phá ngay</a>
+            
+        </div>
+    </section>
+    <!-- home section end -->
+
+    <!-- about section starts -->
+
+    <section class="about" id="about">
+        <h1 class="heading">về chúng tôi</h1>
+        <div class="row">
+            <div class="img">
+                <img src="img/Koala-name.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Điều đặc biệt tại Koala Tea</h3>
+                <p>Tại Koala, chúng tôi không chỉ đơn thuần là một tiệm trà sữa, mà còn là điểm hẹn lý tưởng cho những ai đam mê thưởng thức hương vị độc đáo và trải nghiệm không gian ấm áp, tinh tế. Với sứ mệnh mang lại niềm vui và sự thư giãn qua từng ngụm trà sữa, chúng tôi tự hào là điểm đến yêu thích của cộng đồng yêu trà sữa.</p>
+                <p>Chúng tôi tự tin về sự độc đáo của mỗi ly trà sữa tại Koala. Từ những hương vị kinh điển như trà sữa matcha đậm đà, trà olong thơm lừng, đến những sáng tạo mới mẻ như trà sữa trân châu hoa hồng, chúng tôi luôn đảm bảo sử dụng nguyên liệu chất lượng nhất và quy trình pha chế tỉ mỉ để mang lại cho bạn trải nghiệm tuyệt vời nhất.</p>
+                <p>Ngoài ra, sự thoải mái và ấm cúng không gian tại Koala cũng là điểm đặc biệt mà chúng tôi muốn chia sẻ với khách hàng. Với thiết kế hiện đại nhưng không kém phần gần gũi, bạn có thể thư giãn, tận hưởng không gian riêng tư hay tụ họp cùng bạn bè, đối tác mọi lúc, mọi nơi.</p>
+                <p>Hơn nữa, chúng tôi cam kết với việc thúc đẩy sự bền vững thông qua các biện pháp như sử dụng nguyên liệu hữu cơ, giảm thiểu rác thải, và hỗ trợ cộng đồng địa phương.</p>
+                <p>Với niềm đam mê và sự chăm sóc tỉ mỉ, chúng tôi mong muốn được chia sẻ niềm vui và hạnh phúc qua mỗi ly trà sữa tại Tiệm Trà Sữa Koala. Hãy đến và cùng chúng tôi khám phá thế giới hương vị độc đáo và không gian đẳng cấp ngay hôm nay!</p>
+                <p>Nếu bạn cần thêm thông tin hoặc có bất kỳ câu hỏi nào, đừng ngần ngại liên hệ với chúng tôi. Chúng tôi luôn sẵn lòng phục vụ bạn!</p>
+                <p class="end-para">Trân trọng,</p>
+                <p class="end-para">Đội ngũ Tiệm Trà Sữa Koala</p>
+                <a href="#" class="btn">Tìm hiểu thêm</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MENU section starts  -->
+    <section class="menu" id="menu">
+        <h1 class="heading"> our <span>menu</span></h1>
+        <div class="box-container" id="listmenu">
+            <!-- js script is running here!  -->
+        </div>
+    </section>
+    <!-- MENU section ends  -->
+
+
+
+    <!-- REVIEW section starts  -->
+    <section class="review" id="review">
+        <h1 class="heading">customer's <span>review</span></h1>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review </p>
+                <img src="images/pic-1.png" class="user" alt="">
+                <h3>username1</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review </p>
+                <img src="images/pic-2.png" class="user" alt="">
+                <h3>username2</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review </p>
+                <img src="images/pic-3.png" class="user" alt="">
+                <h3>username3</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review review </p>
+                <img src="images/pic-4.png" class="user" alt="">
+                <h3>username4</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- REVIEW section ends  -->
+    
+    <!-- start contact section -->
+    <section class="contact" id="contact">
+        <!-- <h1 class="heading"> <span>Liên hệ với </span> chúng tôi </h1> -->
+        <h1 class="heading"> Contact us now </h1>
+        <div class="row">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52733.18338828663!2d106.69060881551233!3d10.779316082970821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f38f9ed887b%3A0x14aded5703768989!2zUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1712459244735!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <form action="">
+                <h3> Your information </h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="Họ tên">
+                </div>
+
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="Số điện thoại">
+                </div>
+                
+                <input type="submit" value="Liên hệ ngay" class="btn">
+            </form>
+        </div>
+    </section>
+    <!-- end contact section -->
+
+
+    <!-- start blog section -->
+    <section class="blog" id="blog">
+        <h1 class="heading"> <span>Blog</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="../doan/img/blog-1.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">tasty milktea</a>
+                    <span>by admin / 07th apr, 2024</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../doan/img/blog-1.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">tasty milktea</a>
+                    <span>by admin / 07th apr, 2024</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../doan/img/blog-1.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">tasty milktea</a>
+                    <span>by admin / 07th apr, 2024</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- end blog section -->
+
+    <!-- start fotter section -->
+    <section class="footer">
+        <div class="share">
+            <h3> Social media </h2>
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+            <a href="https://www.tiktok.com/" class="fab fa-tiktok"></a>
+            <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Product</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+            <a href="#blog">Blog</a>
+        </div>
+
+        <div class="credit">Created by <span>Milk Tea Shop</span> | All rights reserved</div>>
+    </section>
+    <!-- end fotter section -->
+    </header>
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+</body>
+</html>
