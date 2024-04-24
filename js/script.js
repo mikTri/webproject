@@ -129,7 +129,7 @@ function initMenu() {
                 <label for="size-l-${idx}" class="custom-control-label">L</label>
             </div>
             <div class="btn-change-sugar">
-                <h5>Đường (%):</h5>
+                <h5>Đường:</h5>
                 <input type="radio" name="sugar-level-${key}" id="sugar-50-${idx} sugar-${key}" class="control-input" data-sugar="50">
                 <label for="sugar-50-${idx}" class="custom-control-label">50</label>
                 <input type="radio" name="sugar-level-${key}" id="sugar-70-${idx} sugar-${key}" class="control-input" data-sugar="70">
@@ -138,7 +138,7 @@ function initMenu() {
                 <label for="sugar-100-${idx}" class="custom-control-label">100</label>
             </div>
             <div class="btn-change-ice" id="ice-bottom">
-                <h5>Đá (%):</h5>
+                <h5>Đá:</h5>
                 <input type="radio" name="ice-level-${key}" id="ice-50-${idx} ice-${key}" class="control-input" data-ice="50">
                 <label for="ice-50-${idx}" class="custom-control-label">50</label>
                 <input type="radio" name="ice-level-${key}" id="ice-70-${idx} ice-${key}" class="control-input" data-ice="70">

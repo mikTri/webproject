@@ -56,7 +56,7 @@ section{
     text-align: center;
     color: var(--font-color-1);
     text-transform: uppercase;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     font-size: 3.5rem;
     font-weight:750;
 }
@@ -95,6 +95,20 @@ section{
     text-align: center;
 
 }
+.contact .row #contactForm .btn{
+    
+    /* display: inline-block; */
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+    background: #965f49;
+    cursor: pointer;
+    border-radius: 20cm;
+    text-align: center;
+    margin-top: 2rem;
+}
+
 .btn:hover{
     letter-spacing: .2rem;
 }
@@ -124,7 +138,7 @@ section{
     text-transform: uppercase;
 }
 .header .navbar a:hover{
-    color: var(--main-color);
+    color: #f3f8dd;
     border-bottom: .1rem solid var(--main-color);
     padding: .5rem;
 }
@@ -187,30 +201,66 @@ section{
 
 
 /* home section */
-.home{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+/* .home{
+    /* min-height: 100vh; */
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: center;
     background: url(../img/banner4-removebg.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
+    background-size: cover; */
+    /* background-position: center; 
+}*/
+/* .home .row{
+    display: flex;
+    justify-content: center;
+} */
+/* .home .row .hinh{
+    
+} */
+/* .home .row .hinh img{
+    width: 80%;
+} */
+/*.home .row .content{
+     flex: 50rem;
+    padding: 2rem;
+    text-align: justify;
+    text-indent: 2em; 
+    flex: 30rem 1 1; 
+}*/
 .home .content h3{
     font-size: 2.5rem;
     text-transform: uppercase;
     color: var(--font-color-1);
-    width: 50%;
+    /* width: 50%; */
 }
 .home .content p{
     font-size: 1.8rem;
     font-weight: lighter;
     line-height: 1.8;
     text-align: justify;
-    padding: 1rem 0;
+    padding: 2rem 0;
     color: #082313;
-    width: 44%;
+    width: 88%;
 }
+.home .row {
+    display: flex;
+    flex-direction: row; /* Đổi hướng thành ngang */
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+}
+
+.home .content {
+    flex: 1; /* Phần tử content chiếm một phần */
+    padding: auto;
+}
+
+.home .hinh {
+    flex: 1; 
+    width: 100%;
+    size-adjust: 10;
+}
+
+
 
 /* about section */
 .about{
@@ -657,16 +707,20 @@ section{
     padding: 3px 10px;
 }
 
+
 /* contact */
 .contact .row{
+    border-radius: 2ch;
     display: flex;
-    background: var(--black);
+    background: #bead55;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .contact .row .map{
     flex: 1 1 45rem;
+    border-radius: 2ch 0 0 2ch;
     width: 100%;
     object-fit: cover;
 }
@@ -679,45 +733,68 @@ section{
 
 .contact .row form h3{
     text-transform: uppercase;
-    font-size: 3.5rem;
-    color: var(--white);
+    font-size: 3rem;
+    color: #fff;
 }
 
 .contact .row form .inputBox{
+    height: fit-content;
     display: flex;
     align-items: center;
     margin-top: 2rem;
-    margin-bottom: 2rem;
     background: var(--bg);
     border: var(--border);
+    border-radius: 1.5ch;
 }
 
 .contact .row form .inputBox span{
-    color: var(--white);
+    color: black;
     font-size: 2rem;
-    padding-left: 2rem;
+    padding-left: 2rem; 
 }  
 
 .contact .row form .inputBox input{
-    color: var(--white);
+    color: var(--black);
     font-size: 1.7rem;
-    padding: 2rem;
+    padding: 1.5rem;
     width: 100%;
     text-transform: none;
     background: none;
 }  
+
+.contact .row form .inputBox .feedback{
+    display: flex;
+    flex: 1;
+}
+
+.contact .row form .inputBox .feedback span{
+    color: black;
+    font-size: 2rem;
+    padding: 2rem; 
+}  
+
+.contact .row form .inputBox .feedback textarea {
+    color: var(--black);
+    font-size: 1.7rem;
+    padding: 2rem 1rem 1rem 0rem; 
+    width: 100%; 
+    min-height: 150px; 
+    resize: vertical; 
+    background: none;
+}
 
 /* blogs */
 .blog .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
+    
 }
 
 .blog .box-container .box{
-    border: var(--border);    
+    border: var(--border);  
+    
 }
-
 .blog .box-container .box .image{
     height: 25rem;
     overflow: hidden;
@@ -735,16 +812,25 @@ section{
 }
 
 .blog .box-container .box .content{
-    padding: 2rem;
+    /* padding: 2rem; */
+    height: 11rem;
+    padding-top: 1rem;
 }
 
 .blog .box-container .box .content .title{
     font-size: 2.5rem;
     line-height: 1.5;
     /* color: #fff; */
-    color: var(--black);
+    color: black;
 }
-
+.box .nut {
+    display: flex;
+    justify-content: center;   /* Canh giữa theo chiều ngang */
+    align-items: center; /* Canh giữa theo chiều doc */
+    /* canh giua div trong div */
+    padding-bottom: 5rem;
+    padding-top: 1rem;
+}
 .blog .box-container .box .content .title:hover{
     color: var(--main-color);
 }
@@ -759,7 +845,8 @@ section{
 .blog .box-container .box .content p{
     line-height: 1.8;
     font-size: 1.6rem;
-    color: var(--white);
+    color: #0c0707;
+    
 }
 
 /* footer*/
@@ -783,7 +870,7 @@ section{
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    color: var(--white);
+    color: #fff;
     border: var(--border);
     margin: .3rem;
     border-radius: 50%;
@@ -816,7 +903,7 @@ section{
     /* padding: 7rem 2rem; */
     padding: .5rem .5em;
     padding-bottom: 1rem;
-    color:  var(--white);
+    color:  #fff;
     
     font-size: 1.7rem;
     /* font-size: 1.5rem; */
@@ -831,9 +918,9 @@ section{
 }
 
 .footer .credit{
-    font-size: 2rem;
+    font-size: 1.5rem;
     /* font-size: 1rem; */
-    color: var(--white);
+    color: #fff;
     font-weight: lighter;
     padding: 1.5rem;
 }
@@ -842,6 +929,7 @@ section{
     color: var(--main-color);
 
 }
+
 
 /* small res */
 @media(max-width:1115px){
