@@ -347,7 +347,7 @@ section{
 }
 .promo .row .content{
     flex: 1 1 45rem;
-    padding: 2rem;
+    padding: .5rem 2rem 1rem 2rem;
 }
 
 .promo .row .content p{
