@@ -5,10 +5,10 @@
 
 
 :root{
-    --main-color: #d3ad7f;
-    --main-color_dark: #8b6331;
+    --main-color: #c3d86d;
+    --main-color_dark: #434738;
     --black:#13131a;
-    --bg: #010103;
+    --bg: #f3f8dd;
     --border:.1rem solid rgba(255,255,255,.3);
 }
 
@@ -21,6 +21,7 @@
     text-transform: capitalize;
     transition: .2s linear;
 }
+
 html{
     font-size:80%;
     overflow-x: hidden;
@@ -45,10 +46,13 @@ section{
 }
 .heading{
     text-align: center;
-    color: #fff;
+    /* color: #fff; */
+    color: #653928;
     text-transform: uppercase;
-    padding-bottom: 3.5rem;
-    font-size: 4rem;
+    /* padding-bottom: 3.5rem;
+    font-size: 4rem; */
+    font-size: 3.5rem;
+    font-weight:750;
 }
 .heading span{
     color: var(--main-color);
@@ -57,22 +61,26 @@ section{
 .btn{
     margin-top: 1rem;
     display: inline-block;
-    padding: .8rem 3rem;
+    /* padding: .8rem 3rem; */
+    padding: 1rem 3rem;
     font-size: 1.7rem;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: var(--main-color_dark);
     background: var(--main-color);
     cursor: pointer;
+    border-radius:20cm;
 }
 .btn:hover{
     letter-spacing: .2rem;
 }
 
 .header{
-    background: var(--bg);
+    /* background: var(--bg); */
+    background: #7ec06a;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 7%;
+    padding: 1.5rem 7%;
     border-bottom: var(--border);
     position: sticky;
     top:0; left: 0; right: 0;
@@ -83,8 +91,12 @@ section{
 }
 .header .navbar a{
     margin: 0 1rem;
-    font-size: 1.6rem;
-    color: #fff;
+    /* font-size: 1.6rem; */
+    /* color: #fff; */
+    font-size: 1.8rem;
+    color: #434738;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .header .navbar a:hover{
     color: var(--main-color);
@@ -318,20 +330,15 @@ section{
     color: var(--black);
 }
 
-/* promo */
-
 .promo .row {
     display: flex;
     align-items: center;
-    background: var(--black);
+    background: #edfed8;
+    /* background: #cdee77; */
     flex-wrap: wrap;
+    margin-top: 1.5rem;
 }
-.promo h1{
-    padding-bottom: 1rem;
-    padding-top: 0%;
-    align-self: auto;
-    font-size: 3.5rem;
-}
+
 .promo .row .img{
     flex: 1 1 45rem;
 }
@@ -345,13 +352,13 @@ section{
 
 .promo .row .content p{
     font-size: 1.6rem;
-    color: #ccc;
+    color: var(--black);
     padding: 1rem 0;
     line-height: 1.8;
 }
 
 .promo .row .content span{
-    color: var(--main-color_dark);
+    color: #132d11;
 }
 
 /* contact */
