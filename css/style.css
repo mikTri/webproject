@@ -60,14 +60,31 @@ section{
     font-size: 3.5rem;
     font-weight:750;
 }
+
+.review .heading{
+    text-align: center;
+    color: #653928;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    font-size: 3.5rem;
+    font-weight:750;
+}
+.menu .heading{
+    text-align: center;
+    color: #3aa93e;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    font-size: 3.5rem;
+    font-weight:750;
+}
 .heading span{
     color: var(--main-color);
     text-transform: uppercase;
 }
 
 .btn{
-    margin-top: 1rem;
-    display: inline-block;
+    
+    /* display: inline-block; */
     padding: 1rem 3rem;
     font-size: 1.7rem;
     font-weight: 600;
@@ -76,6 +93,7 @@ section{
     cursor: pointer;
     border-radius: 20cm;
     text-align: center;
+
 }
 .btn:hover{
     letter-spacing: .2rem;
@@ -91,13 +109,11 @@ section{
     position: sticky;
     top:0; left: 0; right: 0;
     z-index: 1000;
-    align-items: center;
 }
 .header .logo img{
     height: 7rem;
 }
 .header .navbar{
-    width: 80%;
     justify-content:center;
 }
 .header .navbar a{
@@ -179,15 +195,12 @@ section{
     background-size: cover;
     background-position: center;
 }
-.home .content{
-    /* max-width: 55rem; */
-    width: 40%;
-    
-}
+
 .home .content h3{
     font-size: 2.5rem;
     text-transform: uppercase;
     color: var(--font-color-1);
+    width: 50%;
 }
 .home .content p{
     font-size: 1.8rem;
@@ -196,6 +209,7 @@ section{
     text-align: justify;
     padding: 1rem 0;
     color: #082313;
+    width: 44%;
 }
 
 /* about section */
@@ -220,20 +234,21 @@ section{
     text-indent: 2em;
 }
 .about .row .content h3{
-    color: var(--main-color_dark);
+    color: var();
     font-size: 2.5rem;
-    color: var(--yellow);
+    color: #653928;
     text-indent: 0;
-
+    margin-bottom: 1.5rem;
 }
 .about .row .content p{
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: var(--main-color_dark);
-    padding: 1rem 0;
-    line-height: 1.5;
-}
-.about .row .content .end-para{
+    padding: .5rem 0;
+    line-height: 1.8;
     text-indent: 0;
+}
+.end-para{
+    margin-bottom: 3rem;
 }
 
 
@@ -260,8 +275,10 @@ section{
 }
 .menu .box-container .box h4{
     color: var(--main-color_dark);
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 1rem 0;
+    width: 70%;
+    align-self: center;
 }
 .menu .box-container .box .price{
     color: var(--yellow);
@@ -275,9 +292,12 @@ section{
 .menu .box-container .box:hover{
     background: var(--background-2);
 }
-.menu .box-container .box:hover > *{
+/* .menu .box-container .box:hover>*{
     color: var(--font-color-1);
 }
+.btn-change-ice, .btn-change-size, .btn-change-sugar{
+    color: black;
+} */
 
 
 
@@ -287,13 +307,24 @@ section{
 , .control-input{
     color: var(--main-color_dark);
     font-size: 1.2rem;
-    padding: 1rem 0;
+    padding: .6rem 0;
+   
+    
 }
-.btn-change-size, .btn-change-sugar, .btn-change-ice, label, h5 {
+.btn-change-size, .btn-change-sugar, label, h5 {
     display: inline-block; /* Hiển thị nhãn trên cùng một dòng */
     justify-content: center;
     margin-right: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    
+    
+}
+.btn-change-ice{
+    display: inline-block; /* Hiển thị nhãn trên cùng một dòng */
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
 }
 .menu .listmenu{
     display: grid;
@@ -304,13 +335,16 @@ section{
 }
 /* boxed object */
 .box-container .box button{
-    background-color: var(--main-color);
-    color: var(--white);
-    font-size: 1.2rem;
+    background-color: #bead55;
+    color: #ffffff;
+    font-size: 1.4rem;
+    /* font-weight: bold; */
+   
     padding: 1rem;
     width: 100%;
+    
     border-radius: 2ch;
-    align-self: flex-end; /* Căn phần tử button về phía dưới cùng của phần tử cha */
+    /* align-self: flex-end; Căn phần tử button về phía dưới cùng của phần tử cha */
     border: none;
     cursor: pointer;
 }
@@ -442,7 +476,7 @@ section{
     cursor: pointer;
 }
 .listCard li button:hover{
-    background: var(--font-color-1);
+    background: var(--black);
 }
 .listCard li .count{
     color: var(--font-color-1);
@@ -549,7 +583,9 @@ section{
 
 
 /* review section css */
-
+.review{
+    background-color: var(--background-2);
+}
 .review .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -563,7 +599,7 @@ section{
 .review .box-container .box p{
     font-size: 1.9rem;
     line-height: 1.8;
-    color: #ccc;
+    color: #000000fe;
     padding: 2rem 0;
 }
 .review .box-container .box .user{
@@ -575,11 +611,11 @@ section{
 .review .box-container .box h3{
     padding: 1rem 0;
     font-size: 2rem;
-    color: var(--white);
+    color: #7d0608;
 }
 .review .box-container .box .stars i{
     font-size: 1.5rem;
-    color: var(--main-color);
+    color: var(--yellow);
 }
 
 /* header section */

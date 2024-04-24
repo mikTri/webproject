@@ -137,7 +137,7 @@ function initMenu() {
                 <input type="radio" name="sugar-level-${key}" id="sugar-100-${idx} sugar-${key}" class="control-input" data-sugar="100">
                 <label for="sugar-100-${idx}" class="custom-control-label">100</label>
             </div>
-            <div class="btn-change-ice">
+            <div class="btn-change-ice" id="ice-bottom">
                 <h5>Đá (%):</h5>
                 <input type="radio" name="ice-level-${key}" id="ice-50-${idx} ice-${key}" class="control-input" data-ice="50">
                 <label for="ice-50-${idx}" class="custom-control-label">50</label>
