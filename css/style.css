@@ -521,6 +521,7 @@ section{
     background: var(--black);
     flex-wrap: wrap;
     gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .contact .row .map{
