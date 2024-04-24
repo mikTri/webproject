@@ -10,8 +10,8 @@
     --black:#13131a;
     --white: #fff;
     --bg: #f3f8dd;
-    --font-color-1: #653928;
-    --background-1: #7ec06a;
+    --font-color-1: #26b143;
+    --background-1: #90d57b;
     --background-2: #ece4be;
     --yellow: #caac1a;
     --border:.1rem solid rgba(255,255,255,.3);
@@ -70,10 +70,12 @@ section{
     display: inline-block;
     padding: 1rem 3rem;
     font-size: 1.7rem;
-    color: var(--main-color_dark);
-    background: var(--main-color);
+    font-weight: 600;
+    color: #fff;
+    background: #c7003d;
     cursor: pointer;
-    border-radius:20cm;
+    border-radius: 20cm;
+    text-align: center;
 }
 .btn:hover{
     letter-spacing: .2rem;
@@ -173,7 +175,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(../img/banner4.png) no-repeat;
+    background: url(../img/banner4-removebg.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -188,13 +190,12 @@ section{
     color: var(--font-color-1);
 }
 .home .content p{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: lighter;
     line-height: 1.8;
-    text-align: justify; /*canh đều đoạn văn*/
-    text-indent: 2em;
+    text-align: justify;
     padding: 1rem 0;
-    color: var(--yellow);
+    color: #082313;
 }
 
 /* about section */
