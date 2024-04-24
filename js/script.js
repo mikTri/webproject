@@ -208,7 +208,8 @@ document.querySelector('.closeShopping').onclick = () =>{
 //----------------------------
 //hiển thị số lượng trên giỏ hàng (ẩn class #QuanIsExisted trong html):
 function quantityShow(){
-    //giữ nguyên <span class="quantity" id="QuanIsExisted">0</span>
+    //giữ nguyên:
+            // <span class="quantity" id="QuanIsExisted">0</span>
     if (!localStorage.getItem('cartQuantity') || localStorage.getItem('cartQuantity') == 0) {
         console.log("No quantity to show"); 
     }
