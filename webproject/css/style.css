@@ -10,8 +10,8 @@
     --black:#13131a;
     --white: #fff;
     --bg: #f3f8dd;
-    --font-color-1: #26b143;
-    --background-1: #90d57b;
+    --font-color-1: #653928;
+    --background-1: #7ec06a;
     --background-2: #ece4be;
     --yellow: #caac1a;
     --border:.1rem solid rgba(255,255,255,.3);
@@ -56,23 +56,6 @@ section{
     text-align: center;
     color: var(--font-color-1);
     text-transform: uppercase;
-    padding-bottom: 1.5rem;
-    font-size: 3.5rem;
-    font-weight:750;
-}
-
-.review .heading{
-    text-align: center;
-    color: #653928;
-    text-transform: uppercase;
-    padding-bottom: 1rem;
-    font-size: 3.5rem;
-    font-weight:750;
-}
-.menu .heading{
-    text-align: center;
-    color: #3aa93e;
-    text-transform: uppercase;
     padding-bottom: 2rem;
     font-size: 3.5rem;
     font-weight:750;
@@ -83,32 +66,15 @@ section{
 }
 
 .btn{
-    
-    /* display: inline-block; */
+    margin-top: 1rem;
+    display: inline-block;
     padding: 1rem 3rem;
     font-size: 1.7rem;
-    font-weight: 600;
-    color: #fff;
-    background: #c7003d;
+    color: var(--main-color_dark);
+    background: var(--main-color);
     cursor: pointer;
-    border-radius: 20cm;
-    text-align: center;
-
+    border-radius:20cm;
 }
-.contact .row #contactForm .btn{
-    
-    /* display: inline-block; */
-    padding: 1rem 3rem;
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: #fff;
-    background: #965f49;
-    cursor: pointer;
-    border-radius: 20cm;
-    text-align: center;
-    margin-top: 2rem;
-}
-
 .btn:hover{
     letter-spacing: .2rem;
 }
@@ -123,11 +89,13 @@ section{
     position: sticky;
     top:0; left: 0; right: 0;
     z-index: 1000;
+    align-items: center;
 }
 .header .logo img{
     height: 7rem;
 }
 .header .navbar{
+    width: 80%;
     justify-content:center;
 }
 .header .navbar a{
@@ -138,7 +106,7 @@ section{
     text-transform: uppercase;
 }
 .header .navbar a:hover{
-    color: #f3f8dd;
+    color: var(--main-color);
     border-bottom: .1rem solid var(--main-color);
     padding: .5rem;
 }
@@ -167,10 +135,14 @@ section{
 #menu-btn{
     display: none; 
 }
+#search-box{
+    background: var(#ccc);
+}
 .header .search-form{
     position: absolute;
-    top: 115%; right: 7%;
-    background: var(--white);
+    top: 105%; right: 7%;
+    background: var(--background-2);
+    border: var(--main-color);
     width: 50rem;
     height: 5rem;
     display: flex;
@@ -199,75 +171,75 @@ section{
     color: var(--main-color);
 }
 
+/* search list */
+#search-list{
+    list-style-type: none;
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%; /* Đặt ở dưới .search-form */
+    left: 0;
+    width: 100%; /* Độ rộng tương đương với .search-form */
+    background-color: #fff; /* Màu nền của danh sách */
+    border: 1px solid #ccc; /* Viền */
+}
+#search-list li a {
+    font-size:1.5rem;
+    color: var(--main-color_dark);
+    text-align: center;
+
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+}
+#search-list li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 3rem;
+    justify-content: center; /* Canh giữa các thành phần theo chiều ngang */
+    align-items: flex-start; /* Căn đầu các thành phần theo chiều dọc */
+    grid-template-rows: auto; /* Các hàng co giãn theo nội dung */
+}   
+#search-list li:hover {
+    color: var(--font-color-1);
+    font-size:larger;
+    font-weight: bold;
+    border-radius: 0 1ch 1ch 0;
+    background: var(--main-color);
+    opacity: 60%;
+    cursor: pointer;
+}
+
 
 /* home section */
-/* .home{
-    /* min-height: 100vh; */
-    /* display: flex;
-    align-items: center; */
-    /* justify-content: center;
-    background: url(../img/banner4-removebg.png) no-repeat;
-    background-size: cover; */
-    /* background-position: center; 
-}*/
-/* .home .row{
+.home{
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-} */
-/* .header .cart-item-container .cart-item .fa-times{
-    position: absolute;
-    top:1rem; right: 1rem;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--black);
-} */
-/* .home .row .hinh{
+    align-items: center;
+    background: url(../img/banner4.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    /* max-width: 55rem; */
+    width: 40%;
     
-} */
-/* .home .row .hinh img{
-    width: 80%;
-} */
-/*.home .row .content{
-     flex: 50rem;
-    padding: 2rem;
-    text-align: justify;
-    text-indent: 2em; 
-    flex: 30rem 1 1; 
-}*/
+}
 .home .content h3{
     font-size: 2.5rem;
     text-transform: uppercase;
     color: var(--font-color-1);
-    /* width: 50%; */
 }
 .home .content p{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: lighter;
     line-height: 1.8;
-    text-align: justify;
-    padding: 2rem 0;
-    color: #082313;
-    width: 88%;
+    text-align: justify; /*canh đều đoạn văn*/
+    text-indent: 2em;
+    padding: 1rem 0;
+    color: var(--yellow);
 }
-.home .row {
-    display: flex;
-    flex-direction: row; /* Đổi hướng thành ngang */
-    padding-top: 15rem;
-    padding-bottom: 15rem;
-}
-
-.home .content {
-    flex: 1; /* Phần tử content chiếm một phần */
-    padding: auto;
-}
-
-.home .hinh {
-    flex: 1; 
-    width: 100%;
-    size-adjust: 10;
-}
-
-
 
 /* about section */
 .about{
@@ -291,21 +263,20 @@ section{
     text-indent: 2em;
 }
 .about .row .content h3{
-    color: var();
+    color: var(--main-color_dark);
     font-size: 2.5rem;
-    color: #653928;
+    color: var(--yellow);
     text-indent: 0;
-    margin-bottom: 1.5rem;
+
 }
 .about .row .content p{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: var(--main-color_dark);
-    padding: .5rem 0;
-    line-height: 1.8;
-    text-indent: 0;
+    padding: 1rem 0;
+    line-height: 1.5;
 }
-.end-para{
-    margin-bottom: 3rem;
+.about .row .content .end-para{
+    text-indent: 0;
 }
 
 
@@ -326,16 +297,17 @@ section{
     padding: 1rem; /*thay đổi chiều cao khung sản phẩm*/
     text-align: center;
 }
+.box-container #highlight {
+    border: 1px solid var(var(--main-color_dark)); /* Viền */
+}
 .menu .box-container .box img{
     /* height: 25rem; */
     max-width: 80%; /* Đảm bảo hình ảnh không vượt quá kích thước của container */
 }
 .menu .box-container .box h4{
     color: var(--main-color_dark);
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 1rem 0;
-    width: 70%;
-    align-self: center;
 }
 .menu .box-container .box .price{
     color: var(--yellow);
@@ -349,12 +321,9 @@ section{
 .menu .box-container .box:hover{
     background: var(--background-2);
 }
-/* .menu .box-container .box:hover>*{
+.menu .box-container .box:hover > *{
     color: var(--font-color-1);
 }
-.btn-change-ice, .btn-change-size, .btn-change-sugar{
-    color: black;
-} */
 
 
 
@@ -364,24 +333,13 @@ section{
 , .control-input{
     color: var(--main-color_dark);
     font-size: 1.2rem;
-    padding: .6rem 0;
-   
-    
+    padding: 1rem 0;
 }
-.btn-change-size, .btn-change-sugar, label, h5 {
+.btn-change-size, .btn-change-sugar, .btn-change-ice, label, h5 {
     display: inline-block; /* Hiển thị nhãn trên cùng một dòng */
     justify-content: center;
     margin-right: 1rem;
-    font-size: 1.5rem;
-    
-    
-}
-.btn-change-ice{
-    display: inline-block; /* Hiển thị nhãn trên cùng một dòng */
-    justify-content: center;
-    margin-right: 1rem;
-    font-size: 1.5rem;
-    margin-bottom: 1.6rem;
+    font-size: 1.2rem;
 }
 .menu .listmenu{
     display: grid;
@@ -392,16 +350,13 @@ section{
 }
 /* boxed object */
 .box-container .box button{
-    background-color: #bead55;
-    color: #ffffff;
-    font-size: 1.4rem;
-    /* font-weight: bold; */
-   
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.2rem;
     padding: 1rem;
     width: 100%;
-    
     border-radius: 2ch;
-    /* align-self: flex-end; Căn phần tử button về phía dưới cùng của phần tử cha */
+    align-self: flex-end; /* Căn phần tử button về phía dưới cùng của phần tử cha */
     border: none;
     cursor: pointer;
 }
@@ -533,7 +488,7 @@ section{
     cursor: pointer;
 }
 .listCard li button:hover{
-    background: var(--black);
+    background: var(--font-color-1);
 }
 .listCard li .count{
     color: var(--font-color-1);
@@ -583,7 +538,7 @@ section{
 
 
 /* product section */
-.products .box-container{
+/* .products .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
@@ -636,13 +591,11 @@ section{
 }
 .products .box-container .box .content:hover > *{
     color: var(--black);
-}
+} */
 
 
 /* review section css */
-.review{
-    background-color: var(--background-2);
-}
+
 .review .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -656,7 +609,7 @@ section{
 .review .box-container .box p{
     font-size: 1.9rem;
     line-height: 1.8;
-    color: #000000fe;
+    color: #ccc;
     padding: 2rem 0;
 }
 .review .box-container .box .user{
@@ -668,11 +621,11 @@ section{
 .review .box-container .box h3{
     padding: 1rem 0;
     font-size: 2rem;
-    color: #7d0608;
+    color: var(--white);
 }
 .review .box-container .box .stars i{
     font-size: 1.5rem;
-    color: var(--yellow);
+    color: var(--main-color);
 }
 
 /* header section */
@@ -716,17 +669,14 @@ section{
 
 /* contact */
 .contact .row{
-    border-radius: 2ch;
     display: flex;
-    background: #bead55;
+    background: var(--black);
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 1.5rem;
 }
 
 .contact .row .map{
     flex: 1 1 45rem;
-    border-radius: 2ch 0 0 2ch;
     width: 100%;
     object-fit: cover;
 }
@@ -739,68 +689,45 @@ section{
 
 .contact .row form h3{
     text-transform: uppercase;
-    font-size: 3rem;
-    color: #fff;
+    font-size: 3.5rem;
+    color: var(--white);
 }
 
 .contact .row form .inputBox{
-    height: fit-content;
     display: flex;
     align-items: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     background: var(--bg);
     border: var(--border);
-    border-radius: 1.5ch;
 }
 
 .contact .row form .inputBox span{
-    color: black;
+    color: var(--white);
     font-size: 2rem;
-    padding-left: 2rem; 
+    padding-left: 2rem;
 }  
 
 .contact .row form .inputBox input{
-    color: var(--black);
+    color: var(--white);
     font-size: 1.7rem;
-    padding: 1.5rem;
+    padding: 2rem;
     width: 100%;
     text-transform: none;
     background: none;
 }  
-
-.contact .row form .inputBox .feedback{
-    display: flex;
-    flex: 1;
-}
-
-.contact .row form .inputBox .feedback span{
-    color: black;
-    font-size: 2rem;
-    padding: 2rem; 
-}  
-
-.contact .row form .inputBox .feedback textarea {
-    color: var(--black);
-    font-size: 1.7rem;
-    padding: 2rem 1rem 1rem 0rem; 
-    width: 100%; 
-    min-height: 150px; 
-    resize: vertical; 
-    background: none;
-}
 
 /* blogs */
 .blog .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
-    
 }
 
 .blog .box-container .box{
-    border: var(--border);  
-    
+    border: var(--border);    
 }
+
 .blog .box-container .box .image{
     height: 25rem;
     overflow: hidden;
@@ -818,25 +745,16 @@ section{
 }
 
 .blog .box-container .box .content{
-    /* padding: 2rem; */
-    height: 11rem;
-    padding-top: 1rem;
+    padding: 2rem;
 }
 
 .blog .box-container .box .content .title{
     font-size: 2.5rem;
     line-height: 1.5;
     /* color: #fff; */
-    color: black;
+    color: var(--black);
 }
-.box .nut {
-    display: flex;
-    justify-content: center;   /* Canh giữa theo chiều ngang */
-    align-items: center; /* Canh giữa theo chiều doc */
-    /* canh giua div trong div */
-    padding-bottom: 5rem;
-    padding-top: 1rem;
-}
+
 .blog .box-container .box .content .title:hover{
     color: var(--main-color);
 }
@@ -851,8 +769,7 @@ section{
 .blog .box-container .box .content p{
     line-height: 1.8;
     font-size: 1.6rem;
-    color: #0c0707;
-    
+    color: var(--white);
 }
 
 /* footer*/
@@ -876,7 +793,7 @@ section{
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    color: #fff;
+    color: var(--white);
     border: var(--border);
     margin: .3rem;
     border-radius: 50%;
@@ -909,7 +826,7 @@ section{
     /* padding: 7rem 2rem; */
     padding: .5rem .5em;
     padding-bottom: 1rem;
-    color:  #fff;
+    color:  var(--white);
     
     font-size: 1.7rem;
     /* font-size: 1.5rem; */
@@ -924,9 +841,9 @@ section{
 }
 
 .footer .credit{
-    font-size: 1.5rem;
+    font-size: 2rem;
     /* font-size: 1rem; */
-    color: #fff;
+    color: var(--white);
     font-weight: lighter;
     padding: 1.5rem;
 }
@@ -935,7 +852,6 @@ section{
     color: var(--main-color);
 
 }
-
 
 /* small res */
 @media(max-width:1115px){
@@ -957,9 +873,13 @@ section{
     .header .navbar{
         position: absolute;
         top:100%; right: -100%;
-        background: var(--white);
+        /* background: var(--white); */
+        background: var(--background-1);
+        opacity: .8;
         width:20rem;
-        height: calc(100vh - 9.5rem);
+        /* height: calc(100vh - 9.5rem); */
+        max-height: 100vh;
+        border-radius: 0 0 0 3ch;
     }
     .header .navbar.active{
         right: 0;

@@ -6,18 +6,18 @@ let products = [
     { name: "Trà sữa vải", image: "img/product-1.png", stars: 5, price: 49000},
     { name: "Trà sữa ô long", image: "img/product-1.png", stars: 4.5, price: 49000},
     { name: "Trà sữa Thái", image: "img/product-1.png", stars: 4.5, price: 49000},
-    { name: "Trà sữa A", image: "img/product-1.png", stars: 4.5, price: 49000},
-    { name: "Trà sữa B", image: "img/product-1.png", stars: 4.5, price: 49000},
-    { name: "Trà sữa C", image: "img/product-1.png", stars: 4.5, price: 49000},
-    { name: "Trà sữa D", image: "img/product-1.png", stars: 4.5, price: 49000},
-    { name: "Trà sữa E", image: "img/product-1.png", stars: 4.5, price: 49000},
-    { name: "Trà sữa F", image: "img/product-1.png", stars: 4.5, price: 49000},];
+    { name: "Trà sữa xoài kem cheese", image: "img/product-1.png", stars: 4.5, price: 49000},
+    { name: "Trà sữa Pudding đậu đỏ", image: "img/product-1.png", stars: 4.5, price: 49000},
+    { name: "Trà sữa khoai môn", image: "img/product-1.png", stars: 4.5, price: 49000},
+    { name: "Trà sữa bạc hà", image: "img/product-1.png", stars: 4.5, price: 49000},
+    { name: "Trà sữa trân châu trắng", image: "img/product-1.png", stars: 4.5, price: 49000},
+    { name: "Trà sữa sương sáo", image: "img/product-1.png", stars: 4.5, price: 49000},];
 
 let sizeList = ['L', 'M', 'S'];
 let sugarList = ['50', '70', '100'];
 let iceList = ['50', '70', '100'];
 
-// tạo mảng fullProducts bao gồm các thuộc tính size, sugar, ice:
+// tạo mảng fullProducts bao gồm các thuộc tính size, sugar, ice: (TẠM KO DÙNG ĐẾN)
 let fullProducts = [];
 products.forEach((product, index) => {
     sizeList.forEach(size => {
@@ -129,7 +129,7 @@ function initMenu() {
                 <label for="size-l-${idx}" class="custom-control-label">L</label>
             </div>
             <div class="btn-change-sugar">
-                <h5>Đường:</h5>
+                <h5>Đường (%):</h5>
                 <input type="radio" name="sugar-level-${key}" id="sugar-50-${idx} sugar-${key}" class="control-input" data-sugar="50">
                 <label for="sugar-50-${idx}" class="custom-control-label">50</label>
                 <input type="radio" name="sugar-level-${key}" id="sugar-70-${idx} sugar-${key}" class="control-input" data-sugar="70">
@@ -137,8 +137,8 @@ function initMenu() {
                 <input type="radio" name="sugar-level-${key}" id="sugar-100-${idx} sugar-${key}" class="control-input" data-sugar="100">
                 <label for="sugar-100-${idx}" class="custom-control-label">100</label>
             </div>
-            <div class="btn-change-ice" id="ice-bottom">
-                <h5>Đá:</h5>
+            <div class="btn-change-ice">
+                <h5>Đá (%):</h5>
                 <input type="radio" name="ice-level-${key}" id="ice-50-${idx} ice-${key}" class="control-input" data-ice="50">
                 <label for="ice-50-${idx}" class="custom-control-label">50</label>
                 <input type="radio" name="ice-level-${key}" id="ice-70-${idx} ice-${key}" class="control-input" data-ice="70">
@@ -545,7 +545,84 @@ function ReturnInitRemark(){
 }
 
 
-//------------------------------------------------------------
+//SEARCH BAR------------------------------------------------------------
+//hiển thị danh sách theo ký tự nhập vào ô tìm kiếm:   
+var input = document.getElementById("search-box");    // lấy thẻ input
+function searching() {
+    var filter, ul, li, a, i;
+    // lấy giá trị người dùng nhập
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("search-list");
+    li = ul.getElementsByTagName("li");
+    
+    if (!filter) { // Nếu filter không có giá trị thị ẩn phần kết quả
+        ul.style.display = "none";
+    }
+    else{  // lặp qua tất cả các thẻ li chứa kết quả
+        for (i = 0; i < li.length; i++) {
+            // lấy thẻ a trong các thẻ li
+            a = li[i].getElementsByTagName("a")[0];
+            // kiểm tra giá trị nhập có tôn tại trong nội dung thẻ a
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                //hiển thị phần tử ul và các thẻ li đó
+                ul.style.display = "block";
+                li[i].style.display = "";
+            } else {    // nếu không ẩn các thẻ li
+                li[i].style.display = "none";
+            }
+        }
+    }
+}
+//gán sự kiện cho thẻ input
+input.addEventListener("keyup", searching);
+
+// -----------------
+// dẫn đến ô sản phẩm tương ứng trong mục menu khi bấm chọn tìm kiếm một sản phẩm cụ thể:
+let selectedText = '';
+let searchItems = document.querySelectorAll('#search-list li'); // Lấy danh sách các phần tử li trong search-list
+// Lặp qua mỗi phần tử và thêm sự kiện click
+searchItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+        // Nội dung của phần tử được click
+        selectedText = item.textContent.trim();
+        // localStorage.setItem('selectedTextFromSearching', item.textContent.trim());
+        console.log("[search box] phần tử được click: " + selectedText);
+
+        // Ẩn danh sách tìm kiếm sau khi click
+        document.getElementById("search-list").style.display = "none";
+        console.log("finish clickASearchingItem()");
+
+        // -----------------
+        // Link tới box chứa sản phẩm đã tìm kiếm:
+        let menuBoxes = document.querySelectorAll('.box');  // Lấy các menu .box
+        menuBoxes.forEach(function(menuBox) {
+            // Lấy nội dung của thẻ h4 trong menu box
+            console.log(menuBox.querySelector('h4'));
+            if (menuBox.querySelector('h4')){
+                var menuProdName = menuBox.querySelector('h4').textContent;
+                // So sánh tên sản phẩm với tên sản phẩm trong menu box
+                console.log("************menuProdName: " + menuProdName);
+                console.log("************selectedText = " + selectedText);
+    
+                if (menuProdName === selectedText) {
+                    console.log("Đã tìm thấy sản phẩm trong menu");
+    
+                    //thêm class tại phần tử được trỏ đến để tạo hiệu ứng css:
+                    menuBox.setAttribute('id', 'hightlight');
+                    console.log("Đã thêm class trong menu box được tìm kiếm");
+                    // Cuộn đến vị trí của menu box tương ứng
+                    menuBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    console.log("Đã cuộn đến đúng vị trí");
+                    return;
+                }
+            }
+        });
+    });
+});
+
+
+
+
 
 
 
