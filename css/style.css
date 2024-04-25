@@ -591,7 +591,7 @@ section{
 .products .box-container .box{
     text-align: center;
     border: var(--border);
-    padding: 2rem;
+    padding: 4rem;
 }
 .products .box-container .box .icons a{
     height: 5rem;
@@ -797,11 +797,11 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
-    
+    border: #0c0707;
 }
 
 .blog .box-container .box{
-    border: var(--border);  
+    border-color: black; 
     
 }
 .blog .box-container .box .image{
@@ -822,10 +822,13 @@ section{
 
 .blog .box-container .box .content{
     /* padding: 2rem; */
-    height: 11rem;
     padding-top: 1rem;
 }
 
+.blog .wrap-content{
+    height: 41rem;
+    
+}
 .blog .box-container .box .content .title{
     font-size: 2.5rem;
     line-height: 1.5;
@@ -837,8 +840,8 @@ section{
     justify-content: center;   /* Canh giữa theo chiều ngang */
     align-items: center; /* Canh giữa theo chiều doc */
     /* canh giua div trong div */
-    padding-bottom: 5rem;
-    padding-top: 1rem;
+    padding-bottom: 2rem;
+    /* padding-top: 4rem; */
 }
 .blog .box-container .box .content .title:hover{
     color: var(--main-color);
