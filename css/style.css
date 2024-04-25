@@ -214,6 +214,13 @@ section{
     display: flex;
     justify-content: center;
 } */
+/* .header .cart-item-container .cart-item .fa-times{
+    position: absolute;
+    top:1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+} */
 /* .home .row .hinh{
     
 } */
@@ -709,7 +716,6 @@ section{
     left: 50%;
     padding: 3px 10px;
 }
-
 
 /* contact */
 .contact .row{
