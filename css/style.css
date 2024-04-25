@@ -257,7 +257,7 @@ section{
 .home .hinh {
     flex: 1; 
     width: 100%;
-    size-adjust: 10;
+    scale: 1.1;
 }
 
 
