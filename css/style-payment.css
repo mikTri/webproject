@@ -29,7 +29,7 @@
 html{
     font-size:80%;
     overflow-x: hidden;
-    scroll-padding-top: 9rem;
+    scroll-padding-top: 2rem;
     scroll-padding-top: smooth;
 }
 html::-webkit-scrollbar{
@@ -129,11 +129,27 @@ section{
     margin: .5rem 0; 
     padding: .2rem;
 }
-
+h4{
+    font-size: 2rem;
+}
+p, span {
+    font-size: 1.5rem;
+}
+.text-header .text{
+    font-size: 2.5rem;
+}
 .payment-container{
     background-color: var(--bg);
     color: #653928;
-    width: 100%;
+    /* width: 100%; */
+
+    display: flex;
+    flex-direction: column; /* Chuyển sang layout dạng cột */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+
+    /* Để canh giữa */
+    margin: 0 auto; 
+    padding: 3rem; 
 }
 .payment-header-container{
     font-size: 2.5rem;
@@ -145,13 +161,15 @@ section{
 
 /*chia thành các khối dòng và cột:*/
 .payment-body-container{
+    flex-grow: 1; 
+
     display: flex;
-    flex-direction: row;   /*tạo thành 2 cột*/
-    flex-wrap: wrap;
-    gap: 2rem;
+       /*tạo thành 2 cột*/
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 1rem;
     justify-content: center;
-    /* align-items: center; */
-    font-size: 2rem;
+    /* font-size: 2rem; */
 }
 .payment-method-header-box{
     margin-top: 2rem;
