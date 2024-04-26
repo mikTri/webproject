@@ -1,0 +1,285 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
+    <link rel="stylesheet" href="css/style-payment.css">
+</head>
+<body>
+    <!-- header section start -->
+    <header class="header">
+        <!-- tao link khi bam vo logo -->
+        <a href="index.html" class="logo">
+            <img src="img/koala-logo.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html">Trang chủ</a>
+            <a href="index.html#about">Về chúng tôi</a>
+            <a href="index.html#menu">thực đơn</a>
+            
+            <a href="index.html#review">Đánh giá</a>
+            <a href="index.html#contact">Liên hệ</a>
+            <a href="index.html#news">tin tức & ưu đãi</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
+
+    </header>
+
+    <!-- payment start -->
+    <section class="payment-container">
+
+        <!-- header: xác nhận đơn hàng start -->
+        <div class="payment-header-container">
+            <h1 class="text-header">
+                <span class="icon"><i class="fas fa-coffee" id="icon-coffee"></i></span>
+                <span class="text"> Xác nhận đơn hàng</span>
+            </h1>
+            <div class="text-header"></div>
+        </div>
+        <!-- header: xác nhận đơn hàng end -->
+        
+
+        <!-- body: xác nhận đơn hàng start  -->
+        <div class="payment-body-container">
+            
+            <div class="delivery-container">
+                <!-- box: giao hàng start -->
+                <div class="delivery-box">
+                    <div class="delivery-header-box">
+                        <h4 class="delivery-header">Giao hàng</h4>    
+                        <!-- <button class="btn-change-adrr">Thay đổi địa chỉ</button> -->
+                    </div>
+                    
+                    <hr class="decorative-line">
+
+                    <div class="delivery-addr-box">
+                        <div class="delivery-addr-card">
+                            <div class="delivery-img">
+                                <img src="img/delivery-icon.png" alt="delivery-img">
+                                <!-- <img src="" alt="delivery-img"> -->
+                            </div>
+    
+                            <div class="delivery-addr">
+                                <p class="delivery-addr-desc">UIT, Làng đại học, Thủ Đức</p>
+                            </div>
+                        </div>
+    
+                        <div class="delivery-noti">
+                            <div class="noti-img">
+                                <img src="img/delivery-icon.png" alt="delivery-img">
+                                <!-- <img src="" alt="delivery-img"> -->
+                            </div>
+                            <div class="delivery-addr">
+                                <p class="noti">Nhận hàng trong vòng 15 - 30 phút</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="delivery-form">
+                        
+                        <form action="" id="contactForm">
+                            <h4> Thông tin người nhận hàng </h4>
+                            
+                            <div class="form-group">
+                                <span class="fas fa-user"></span>
+                                <input type="text" id="name" placeholder="Họ tên người nhận">
+                            </div>
+                            <div class="form-group">
+                                <span class="fas fa-phone"></span>
+                                <input type="number" id="phone" placeholder="Số điện thoại" required>
+                            </div>
+                            <div class="form-group">
+                                <div class="takenote" id="note">
+                                    <span class="fa-regular fa-pen-to-square"></span>
+                                    <textarea placeholder="Thêm hướng dẫn giao hàng" required></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <!-- box: giao hàng end -->
+                
+                <!-- box: payment-method-box start -->
+                <div class="payment-box">
+                    <div class="payment-method-header-box">
+                        <h4 class="payment-method-header">Phương thức thanh toán</h4>
+                    </div>
+
+                    <hr class="decorative-line">
+
+                    <!-- các phương thức thanh toán  -->
+                    <ul class="payment-method-list">
+                        <!-- Tiền mặt  -->
+                        <li class="payment-method-item">
+                            <div class="payment-method-row">
+                                <input type="radio" name="payment-method" id="COD" class="control-input">
+                                <label for="COD" class="custom-control-label">
+                                    <span class="icon">
+                                        <img src="img/COD.png" alt="">
+                                    </span>
+                                    <span class="text">Tiền mặt</span>
+                                </label>
+                            </div>
+                        </li> 
+                        <!-- Momo  -->
+                        <li class="payment-method-item">
+                            <div class="payment-method-row">
+                                <input type="radio" name="payment-method" id="Momo" class="control-input">
+                                <label for="Momo" class="custom-control-label">
+                                    <span class="icon">
+                                        <img src="img/momo.png" alt="">
+                                    </span>
+                                    <span class="text">Momo</span>
+                                </label>
+                            </div>
+                        </li>
+                        <!-- ZaloPay  -->
+                        <li class="payment-method-item">
+                            <div class="payment-method-row">
+                                <input type="radio" name="payment-method" id="ZaloPay" class="control-input">
+                                <label for="ZaloPay" class="custom-control-label">
+                                    <span class="icon">
+                                        <img src="img/zaloPay.png" alt="">
+                                    </span>
+                                    <span class="text">ZaloPay</span>
+                                </label>
+                            </div>
+                        </li>
+                        <!-- Thẻ ngân hàng  -->
+                        <li class="payment-method-item">
+                            <div class="payment-method-row">
+                                <input type="radio" name="payment-method" id="atm" class="control-input">
+                                <label for="atm" class="custom-control-label">
+                                    <span class="icon">
+                                        <img src="img/atm-card.png" alt="">
+                                    </span>
+                                    <span class="text">Thẻ ngân hàng</span>
+                                </label>
+                            </div>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+                <!-- box: payment-method-box end -->
+
+                
+                <!-- box: policy start -->
+                <div class="policy-box">
+                    <label class="checkbox-btn">
+                        <input checked="checked" disabled="disabled" type="checkbox" id="choice1-1" name="choice1">
+                        <span>Tôi đồng ý với các điều kiện mua hàng...</span>
+    
+                    </label>
+                </div>
+                <!-- box: policy end -->
+
+            </div>
+
+            <!-- box: các món đã chọn start -->
+            <div class="orders-container">
+
+                <div class="orders-header-box">
+                    <h4 class="orders-header">Các món đã chọn</h4>
+                    <a href="index.html#menu" class="btn-addin btn">Thêm món</a>
+                </div>
+
+                <hr class="decorative-line">
+
+                <!-- <div class="listCart">
+                    
+                </div> -->
+
+                <!-- <ul class="listCart"> -->
+                    <!-- js script here! -->
+                <!-- </ul> -->
+                <div class="grid-listCarts">
+                    <h5>Đơn hàng của bạn</h5>
+                    <table id="grid-listCarts">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Size</th>
+                                <th>Số lượng</th>
+                                <th>Đường/ Đá</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!-- JS of tbody here -->
+                        </tbody>
+                    </table>
+                    <div class="grandTotal">
+                        <div class="grandTotal-ele">
+                            <span>Tổng số lượng:</span>
+                            <span id="grandTotal-quan"></span>
+                        </div>
+                        <div class="grandTotal-ele">
+                            <span>Tổng giá tiền:</span>
+                            <span id="grandTotal-price"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nút thanh toán start-->
+                <div class="btn-submitPayment">
+                    <a href="#" class="btn">Thanh toán ngay</a>
+                </div>
+                <!-- Nút thanh toán end-->
+
+            </div>
+            <!-- box: các món đã chọn end -->
+    
+            
+    
+
+            <!-- body: xác nhận đơn hàng end  -->
+    
+        </div>
+
+    </section>
+    <!-- payment end  -->
+
+
+    
+    <!-- header section end -->
+
+
+    <!-- FOOTER section starts -->
+    <section class="footer">
+        <div class="share">
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+            <a href="https://www.tiktok.com/" class="fab fa-tiktok"></a>
+            <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">Trang chủ</a>
+            <a href="#about">Về chúng tôi</a>
+            <a href="#menu">thục đơn</a>
+            <a href="#review">Đánh giá</a>
+            <a href="#contact">Liên hệ</a>
+            <a href="#blog">Tin tức & ưu đãi</a>
+        </div>
+
+        <div class="credit">Created by <span>Milk Tea Shop</span> | All rights reserved</div>>
+    </section>
+    <!-- end fotter section -->
+    </header>
+    <!-- custom js -->
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script-payment.js"></script>
+</body>
+</html>
