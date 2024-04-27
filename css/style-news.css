@@ -186,11 +186,11 @@ section{
     max-width: 100%;
 }
 
-
+/* 
 .promo .row .content p{
     
     
-}
+} */
 
 .promo .row .content span{
     color: #132d11;
@@ -207,8 +207,8 @@ section{
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-    height: 20rem;
+    /* z-index: 1000;
+    height: 20rem; */
 }
 .footer .share h3{
     text-transform: uppercase;
