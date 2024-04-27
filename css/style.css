@@ -695,18 +695,22 @@ section{
 .review .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 }
 .review .box-container .box{
+    margin-top: 2rem;
     border: var(--border);
     text-align: center;
     padding: 3rem 2rem;
+    background: rgb(255, 255, 255);
+    border-radius: 5ch;
 }
 .review .box-container .box p{
     font-size: 1.9rem;
     line-height: 1.8;
     color: #000000fe;
     padding: 2rem 0;
+    text-transform: none;
 }
 .review .box-container .box .user{
     height: 7rem;
