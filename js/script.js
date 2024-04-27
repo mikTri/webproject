@@ -723,3 +723,27 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 
+// contact
+console.log("Trước khi gán sự kiện submit");
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Ngăn form được gửi đi mặc định
+    console.log("Đã kích hoạt sự kiện submit");
+    // Kiểm tra xem tất cả các trường bắt buộc đã được điền đầy đủ hay không
+    var inputs = document.querySelectorAll("#contactForm input[required]");
+    var allFieldsFilled = true;
+    inputs.forEach(function(input) {
+        if (input.value.trim() === "") {
+            allFieldsFilled = false;
+        }
+    });
+    if (allFieldsFilled) {
+        // Nếu tất cả các trường đã được điền, hiển thị thông báo và reload trang sau 1 giây
+        alert("Đã gửi phản hồi!");
+        setTimeout(function() {
+            window.location.reload(true);
+        }, 1000);
+    } else {
+        // Nếu vẫn còn trường bắt buộc chưa được điền, không làm gì cả
+        return;
+    }
+});
